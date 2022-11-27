@@ -41,11 +41,11 @@ class Connectors
         return  $this->id = $id;
     }
 
-    public function result(){
+    public function getResult(){
         return  $this->response->result;
     }
 
-    public function error(){
+    public function getError(){
         return  $this->response->error;
     }
     public function getId(){
@@ -53,7 +53,7 @@ class Connectors
     }
     public function checkError(){
         if(isset($this->response->error)){
-            return $this->response->error;
+            return true;
         }else{
             return false;
         }
