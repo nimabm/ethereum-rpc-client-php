@@ -1,14 +1,14 @@
 <?php
 namespace nimabm\Ethereum;
 
-class Connectors 
+class Connectors
 {
-     public $rpcUrl;
-     public $id;
-     public function __construct($apiUrl) {
+    public $rpcUrl;
+    public $id;
+    public function __construct($apiUrl) {
         $this->rpcUrl = $apiUrl;
     }
-  
+
     public function call($method,$params=[]){
         $input['jsonrpc'] = "2.0";
         $input['method'] = $method;
@@ -38,25 +38,25 @@ class Connectors
     }
 
     public function setId($id){
-            return  $this->id = $id;
+        return  $this->id = $id;
     }
 
     public function result(){
-            return  $this->response->result;
+        return  $this->response->result;
     }
-    
+
     public function error(){
-            return  $this->response->error;
+        return  $this->response->error;
     }
     public function getId(){
-            return  $this->response->result->id;
+        return  $this->response->result->id;
     }
     public function checkError(){
-           if(isset($this->response->error)){
-           return $this->response->error;
-           }else{
-           return false;
-           }
+        if(isset($this->response->error)){
+            return $this->response->error;
+        }else{
+            return false;
+        }
     }
 
 }
