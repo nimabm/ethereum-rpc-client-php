@@ -1,0 +1,21 @@
+{
+    "name": "nimabm/ethereum-rpc-client-php",
+    "description": "ethereum rpc client php",
+    "license": "MIT",
+    "keywords": ["php", "web3", "ethereum", "json-rpc", "api", "client"],
+    "homepage": "https://github.com/nimabm/ethereum-rpc-client-php",
+    "authors": [
+        {
+            "name": "Nima Barzegar",
+            "email": "nima@barzegar.eu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"ethereum\\": "src/"}
+    },
+    "require": {
+    "php": ">=5.5.0",
+    "ext-curl": "*",
+    "ext-json": "*"
+  }
+}
